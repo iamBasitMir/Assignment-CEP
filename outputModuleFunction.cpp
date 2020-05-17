@@ -52,9 +52,9 @@ void outputModule::studentsLaptopQueue()
         Student present = Student_Queue.front();
         if (present.enterTime == timeindex)
         {
-            cout << TimeFormat(timeindex) << " " << present.firstName << " " << present.lastName << " " << " has arrived in TA#007\n";
             //getting the particular present student out of the queue.
             Student_Queue.pop();
+            cout << TimeFormat(timeindex) << " " << present.firstName << " " << present.lastName << " " << " has arrived in TA#007\n";
             // add student to laptop queue
             Laptop_Queue.push(present);
         }
